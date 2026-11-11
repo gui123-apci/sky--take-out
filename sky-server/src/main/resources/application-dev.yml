@@ -1,0 +1,31 @@
+spring:
+  # 本地私有配置（数据库密码、OSS 密钥等），该文件已被 .gitignore 忽略；
+  # 导入的配置优先级高于本文件，因此可覆盖下面的占位值
+  config:
+    import: optional:classpath:application-local.yml
+
+sky:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: ${SKY_DB_HOST:localhost}
+    port: ${SKY_DB_PORT:3306}
+    database: ${SKY_DB_NAME:sky_take_out}
+    username: ${SKY_DB_USERNAME:root}
+    password: ${SKY_DB_PASSWORD:}
+
+  alioss:
+    endpoint: ${SKY_ALIOSS_ENDPOINT:oss-cn-beijing.aliyuncs.com}
+    access-key-id: ${SKY_ALIOSS_ACCESS_KEY_ID:your_access_key_id}
+    access-key-secret: ${SKY_ALIOSS_ACCESS_KEY_SECRET:your_access_key_secret}
+    bucket-name: ${SKY_ALIOSS_BUCKET_NAME:your_bucket_name}
+
+  redis:
+    host: ${SKY_REDIS_HOST:localhost}
+    port: ${SKY_REDIS_PORT:6379}
+    password: ${SKY_REDIS_PASSWORD:}
+    database: ${SKY_REDIS_DB:0}
+
+  wechat:
+    # 切换真实微信登录时填写，并把 sky.wechat.mock-enabled 改为 false
+    appid: ${SKY_WECHAT_APPID:your_appid}
+    secret: ${SKY_WECHAT_SECRET:your_secret}

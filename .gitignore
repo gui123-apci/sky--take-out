@@ -1,0 +1,29 @@
+# Java / build output
+**/target/
+*.class
+
+# Tests
+*Test.java
+**/test/
+
+# IDE / local config
+.idea/
+.vscode/
+*.iml
+
+# Logs and local runtime files
+*.log
+logs/
+.DS_Store
+
+# Local-only secrets (see README "配置说明")
+sky-server/src/main/resources/application-local.yml
+
+# Mini program build output / local settings
+sky-mini-program/node_modules/
+sky-mini-program/unpackage/
+sky-mini-program/.VSCodeCounter/
+sky-mini-program/project.private.config.json
+
+# nginx (contains Windows binaries, logs and built admin dist; see README)
+nginx/

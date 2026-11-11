@@ -1,0 +1,11 @@
+# 本地私有配置示例（复制为 application-local.yml 后填写真实值）
+# 说明：application-local.yml 已被 .gitignore 忽略，不会被提交到仓库。
+# 也可以不用该文件，直接通过同名的环境变量注入（见 README）。
+sky:
+  datasource:
+    password: your_db_password
+
+  alioss:
+    access-key-id: your_access_key_id
+    access-key-secret: your_access_key_secret
+    bucket-name: your_bucket_name
